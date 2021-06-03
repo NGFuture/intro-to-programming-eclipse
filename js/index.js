@@ -18,17 +18,21 @@ footer.appendChild(copyright)
 const skills = ["Coding JavaScript","WebDesign",'Photography'];
 console.log(skills)
 
+
 const skillsSelection=document.getElementById('skills')
 console.log(skillsSelection)
-
-const skillsList=skillsSelection.querySelector('ul')
-console.log(skillsList)
-
-for(i=0;i<skills.length;i++){
+if (skillsSelection !== null) {
+    const skillsList=skillsSelection.querySelector('ul')
+    console.log(skillsList)
     
-    const skill=document.createElement('li')
-    skill.innerHTML=`${skills[i]}`
-    skillsList.appendChild(skill)
-
+    for(i=0;i<skills.length;i++){
+        
+        const skill=document.createElement('li')
+        skill.innerHTML=`${skills[i]}`
+        skillsList.appendChild(skill)
+    
+    }
+    console.log(skillsList)
 }
-console.log(skillsList)
+
+
