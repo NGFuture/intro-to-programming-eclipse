@@ -35,4 +35,9 @@ if (skillsSelection !== null) {
     console.log(skillsList)
 }
 
+const messageForm=document.getElementsByName('leave_message')[0]
+console.log(messageForm);
+messageForm.addEventListener('submit', (e) =>{
+    console.log(e)
 
+})
