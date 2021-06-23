@@ -1,0 +1,45 @@
+* {
+    background-color: rgb(11, 3, 46);
+    color: wheat;
+    font-family: 'Trebuchet MS';
+    width: 96%;
+    margin-left: 3%;
+}
+
+html {
+    font-size: 100%
+}
+
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+section {
+    padding: 1%;
+    
+}
+
+p {
+    font-size: 1.25rem;
+}
+
+#skills ul li {
+    list-style: none; /* no dots for list elements */
+    display: flex;
+    
+    writing-mode: horizontal-tb;
+    border-radius: 0.25rem;
+  background: #73AD21;
+  padding: 0.7rem;
+  margin: 0.7rem;
+
+  width: 200px;
+  
+  box-sizing: border-box
+
+}
