@@ -1,11 +1,20 @@
 * {
+    box-sizing: border-box;
     background-color: rgb(11, 3, 46);
     color: wheat;
     font-family: 'Trebuchet MS';
-    width: 96%;
-    margin-left: 3%;
+    /* width: 96%;
+    margin-left: 3%; */
 }
 
+body {
+    /* browser will choose one of 2 declaration 100% or 960 px */
+    width: 100%;
+    max-width: 960px;
+    /* top and bottom margins set to 0, left and right are set to auto, so 
+    it will be calculated by browser to set the body in the middle */
+    margin: 0 auto 0;
+}
 html {
     font-size: 100%
 }
@@ -30,16 +39,33 @@ p {
 
 #skills ul li {
     list-style: none; /* no dots for list elements */
-    display: flex;
+    display: inline-block;
     
     writing-mode: horizontal-tb;
     border-radius: 0.25rem;
-  background: #73AD21;
-  padding: 0.7rem;
-  margin: 0.7rem;
+    /* opacity is 50%.  */
+  background: rgba(115,173,33, 0.5);
+  padding: 0.2rem;
+  margin: 0.5rem;
 
-  width: 200px;
   
-  box-sizing: border-box
+  box-sizing: border-box;
+  width: auto;
+}
 
+
+
+@media print {
+    section {
+    min-height: auto;
+    padding: 0;
+    }
+    * {
+        color: black;
+    }
+
+    h1, h2 {
+        margin: 5 0 5;
+        color: rgb(31, 60, 190);
+    }
 }
