@@ -1,10 +1,9 @@
 * {
     box-sizing: border-box;
-    background-color: rgb(11, 3, 46);
+    /* background-color: rgb(11, 3, 46); */
     color: wheat;
     font-family: 'Trebuchet MS';
-    /* width: 96%;
-    margin-left: 3%; */
+ 
 }
 
 body {
@@ -19,18 +18,50 @@ html {
     font-size: 100%
 }
 
+.whole_page, .main_header, .main_nav, #work_in_progress {
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.main_header {
+    background-color: rgb(160, 150, 200);
+    padding: 0.25rem;
+    align-items: center;
+}
+
+.main_nav{
+    list-style: none;
+}
+
+.main_nav li {
+    margin-right: 10px;
+}
+
+.main_nav a:link {
+     text-decoration: none;
+    
+}
+
+.main_nav a:hover {
+    text-decoration: underline;
+  }
+
 
 h1 {
-    font-size: 3rem;
+    margin: 0;
+    font-size: 2rem;
 }
 
 h2 {
     font-size: 1.5rem;
+
 }
 
 section {
     padding: 1%;
-    
+    background-color: rgb(11, 3, 46)
 }
 
 p {
@@ -53,7 +84,19 @@ p {
   width: auto;
 }
 
+img {
+    border: 2px solid rgb(101 ,239, 52);
+    border-radius: 10%;
+    
+}
 
+img:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+  
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+  }
 
 @media print {
     section {
@@ -69,3 +112,55 @@ p {
         color: rgb(31, 60, 190);
     }
 }
+
+@media (min-width: 769px) {
+    .main_header, .main_nav {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+    .main_header {
+        justify-content: space-between;
+
+    }
+    
+
+    
+    #work_in_progress  {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+
+    #work_in_progress h2 {
+        flex: 1 100%;
+
+    }
+
+/* NOT WORKING PROPERLY - when really wide screen becoms column again. Whay 20vw not 50? or 25% not 50%*/
+    .col  {
+        margin: 5px;
+        flex: 1 25%;
+
+    }
+
+}
+    
+
+
+
+
+
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
