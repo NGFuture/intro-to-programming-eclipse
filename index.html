@@ -34,6 +34,16 @@
 
         <section>
         <h2>About</h2>
+
+        <figure>
+            <img src="IMG\20210625 PHOTO.jpg" alt="Photo About" title="Photo launcher" class="photo_natalia">
+            <figcaption>
+                
+            </figcaption>
+
+        </figure>
+
+
         <p>I <em>love launching </em> new projects. Let's launch something fun together!</p>
         </section>
         
@@ -54,7 +64,7 @@
         <section id="work_in_progress">
             <h2>Work in progress</h2>
             <figure class="col">
-                <img src="img/Launch_Hobby_app.jpg" alt="Launch Hobby app" title="Launch Hobby app description">
+                <img src="img/Launch_Hobby_app.jpg" alt="Launch Hobby app" title="Launch Hobby app description" class="app_icon">
                 <figcaption>
                     Launch Hobby application
                 </figcaption>
@@ -62,7 +72,7 @@
             </figure>
 
             <figure class="col"> 
-                <img src="img/Launch_Study_app.jpg" alt="Launch Study app" title="Launch Study app description">
+                <img src="img/Launch_Study_app.jpg" alt="Launch Study app" title="Launch Study app description" class="app_icon">
                 <figcaption>
                     Launch Study application
                 </figcaption>
@@ -79,16 +89,24 @@
 
         <section>
         <h2>Leave a Message</h2>
-        <form name='leave_message'>
-            <label for="name">Your name</label><br>
-            <input type='text' name='name' id='name' required=true><br> 
-            
-            <label for='email'>Email</label><br>
-            <input type='email' name='email' id='email' required=true><br> 
-            
-            <label for='message'>Your message</label><br>
-            <textarea name='message' id='message' required=true></textarea><br> 
-            <button type='submit'>Submit</button>
+        <form name='leave_message' class="leave_message">
+            <div class="form_name">
+                <label for="name">Your name</label>
+                <input type='text' name='name' id='name' required=true>
+            </div>
+
+            <div class="form_email">
+                <label for='email'>Email</label>
+                <input type='email' name='email' id='email' required=true>
+            </div>
+
+            <div class="form_message">
+                <label for='message'>Your message</label>
+                <textarea name='message' id='message' required=true></textarea>
+            </div>  
+
+            <button type='submit' class="form_button" >Submit</button>
+
         </form>
         </section>
 

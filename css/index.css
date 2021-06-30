@@ -18,11 +18,15 @@ html {
     font-size: 100%
 }
 
-.whole_page, .main_header, .main_nav, #work_in_progress {
+.whole_page, .main_header, .main_nav, #work_in_progress, .form_name, .form_email, .form_message {
     display: flex;
 
     flex-direction: column;
 
+}
+
+.whole_page {
+    min-height: 100vh;
 }
 
 .main_header {
@@ -59,6 +63,14 @@ h2 {
 
 }
 
+.photo_natalia {
+    border: 2px solid rgb(101 ,239, 52);
+    border-radius: 50%;
+    width: 200px;
+   
+}
+
+
 section {
     padding: 1%;
     background-color: rgb(11, 3, 46)
@@ -84,19 +96,70 @@ p {
   width: auto;
 }
 
-img {
+.app_icon  {
     border: 2px solid rgb(101 ,239, 52);
     border-radius: 10%;
     
 }
 
-img:hover {
+.app_icon:hover {
     /* Start the shake animation and make the animation last for 0.5 seconds */
     animation: shake 0.5s;
   
     /* When the animation is finished, start again */
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
   }
+
+/*  GRID FOR MESSAGE FORM */
+.leave_message {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-gap: 20px;
+    grid-template-areas: 
+        "form_name form_email"
+        "form_message form_message"
+        "form_button form_button"
+       
+}
+
+.form_name {
+    grid-area: form_name;
+}
+
+.form_email {
+    grid-area: form_email;
+}
+
+.form_message {
+    grid-area: form_message;
+}
+
+.form_button {
+    grid-area: form_button;
+}
+
+
+/* Flex inside message grid*/
+.form_message, .form_name, .form_email {
+    flex-grow: 1;
+
+}
+
+/* Button format*/
+.form_button {
+    margin: auto;
+    padding: 8px 16px;
+    border: none;
+    background-color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.09rem;
+    border-radius: 2px;
+
+}
+
+footer {
+    margin-top: auto;
+}
 
 @media print {
     section {
@@ -134,6 +197,12 @@ img:hover {
     #work_in_progress h2 {
         flex: 1 100%;
 
+    }
+
+    .photo_natalia {
+        border: 2px solid rgb(101 ,239, 52);
+        width:30%;
+        
     }
 
 /* NOT WORKING PROPERLY - when really wide screen becoms column again. Whay 20vw not 50? or 25% not 50%*/
