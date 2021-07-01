@@ -18,7 +18,7 @@ html {
     font-size: 100%
 }
 
-.whole_page, .main_header, .main_nav, #work_in_progress, .form_name, .form_email, .form_message {
+.whole_page, .main_header, .main_nav, #work_in_progress, .form_name, .form_email, .form_message, .about figure {
     display: flex;
 
     flex-direction: column;
@@ -67,7 +67,7 @@ h2 {
     border: 2px solid rgb(101 ,239, 52);
     border-radius: 50%;
     width: 200px;
-   
+    margin: auto;
 }
 
 
@@ -161,6 +161,25 @@ footer {
     margin-top: auto;
 }
 
+/* Hobby page */
+.photo_gal, .photo_gal figure {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    min-width: 0
+}
+
+.photo_gal figure {
+    flex-grow: 1;
+    /* padding: 0 4px; */
+}
+
+.photo_gal img {
+    flex: 100%;
+    padding: 0 4px;
+    width: 100%;
+}
+
 @media print {
     section {
     min-height: auto;
@@ -177,7 +196,7 @@ footer {
 }
 
 @media (min-width: 769px) {
-    .main_header, .main_nav {
+    .main_header, .main_nav, .about {
         flex-direction: row;
         align-items: flex-end;
     }
@@ -199,10 +218,50 @@ footer {
 
     }
 
+    .leave_message {
+        display: grid;
+        /* grid-template-columns: 1fr 1fr; */
+        grid-gap: 0px;
+        grid-template-areas: 
+            "form_name form_email"
+            "form_message form_message"
+            "form_button form_button"
+           
+    }
+    
+    .form_name {
+        grid-area: form_name;
+    }
+    
+    .form_email {
+        grid-area: form_email;
+    }
     .photo_natalia {
         border: 2px solid rgb(101 ,239, 52);
-        width:30%;
-        
+        width:200px;
+    }
+
+    .about {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-rows: auto 200px;
+        grid-template-areas: 
+            "about_name about_name about_name about_name"
+            "about_figure about_discription about_discription about_discription"
+
+    }
+
+    .about h2 {
+        grid-area: about_name;
+    }
+
+    .about figure {
+        grid-area: about_figure;
+    }
+
+    .about p {
+        grid-area: about_discription;
+        place-self: center;
     }
 
 /* NOT WORKING PROPERLY - when really wide screen becoms column again. Whay 20vw not 50? or 25% not 50%*/
