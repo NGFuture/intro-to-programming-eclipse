@@ -69,3 +69,46 @@ messageForm.addEventListener('submit', (e) =>{
     messageForm.reset();
 
 })
+
+//Request to GITHUB
+const githubRequest = new XMLHttpRequest();
+const GITHUB_USERNAME = 'NGFuture';
+githubRequest.open("GET", `https://api.github.com/users/${GITHUB_USERNAME}/repos`);
+// form the request detail
+githubRequest.send();
+
+// when we get data, read it
+
+// variant 1
+// githubRequest.addEventListener('load', (e) => {
+//     const resp = e.target.response;
+
+//     const data = JSON.parse(resp);
+
+//     console.log(data)
+// })
+
+//variant 2
+githubRequest.onload = function() {  
+    const repositories = JSON.parse(this.response);
+    
+    const projectSection = document.getElementById('projects');
+    const projectList = projectSection.querySelector('ul');
+
+    repositories.forEach(repo =>{
+        const project = document.createElement('li');
+        console.log(repo);
+        
+        //project.innerText = repo.name;
+
+        project.innerHTML=`
+        <a href="${repo.html_url}"> Project ${repo.name} </a>`
+
+        projectList.appendChild(project);
+
+    })
+    
+    
+    
+    console.log(repositories);
+}
