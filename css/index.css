@@ -33,6 +33,7 @@ html {
     background-color: rgb(160, 150, 200);
     padding: 0.25rem;
     align-items: center;
+    
 }
 
 .main_nav{
@@ -175,6 +176,12 @@ footer {
 }
 
 .photo_gal img {
+    flex: 100%;
+    padding: 0 4px;
+    width: 100%;
+}
+
+.photo_gal video {
     flex: 100%;
     padding: 0 4px;
     width: 100%;
