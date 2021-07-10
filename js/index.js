@@ -81,6 +81,7 @@ messageForm.addEventListener('submit', (e) =>{
 const GITHUB_USERNAME = 'NGFuture'
 fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos`)
     .then(response =>response.json())
+    .catch(error => console.log('Looks like there was a problem:', error))
     .then(response => {  
             const projectSection = document.getElementById('projects');
             const projectList = projectSection.querySelector('ul');
