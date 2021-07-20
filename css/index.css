@@ -1,8 +1,7 @@
 * {
     box-sizing: border-box;
-    /* background-color: rgb(11, 3, 46); */
-    color: rgb(241, 236, 221);
-    font-family: 'Trebuchet MS';
+    color:  rgb(241, 236, 221);
+    font-family: 'Lato', sans-serif;
 }
 
 body {
@@ -30,7 +29,6 @@ html {
     background-color: rgb(82, 40, 102);
     padding: 0.25rem;
     align-items: center;
- 
 }
 
 /* Main header list decorations section - START*/
@@ -40,7 +38,7 @@ html {
 .main_nav li {
     margin-right: 10px;
 }
-.main_nav a:link {
+.main_nav a {
      text-decoration: none;    
 }
 .main_nav a:hover {
@@ -67,6 +65,9 @@ html {
 .second_nav {
     background-color: rgb(136, 211, 23)
 
+}
+.second_nav_list li a {
+    color: rgb(82, 40, 102);
 }
 /* SECONDARY Navigation decorations section - END*/
 
@@ -125,7 +126,6 @@ p {
 .app_icon:hover {
     /* Start the shake animation and make the animation last for 0.5 seconds */
     animation: shake 0.5s;
-  
     /* When the animation is finished, start again */
     animation-iteration-count: 1;
   }
@@ -139,35 +139,30 @@ p {
         "app_picture1"
         "app_text1"
         "app_picture2"
-        "app_text2"
-       
+        "app_text2"      
 }
 .app_header {
-    grid-area: app_header;
-    
+    grid-area: app_header;    
 }
 .app_picture1 {
     grid-area: app_picture1;
 }
 .app_text1 {
     grid-area: app_text1;
+    align-self: center
 }
 .app_picture2 {
     grid-area: app_picture2;
 }
 .app_text2 {
     grid-area: app_text2;
+    align-self: center
 }
-
-
 
 /* Flex inside message grid*/
 .form_message, .form_name, .form_email {
     flex-grow: 1;
 }
-
-
-
 
 /*  GRID FOR MESSAGE FORM */
 .leave_message {
@@ -180,23 +175,18 @@ p {
         "form_button form_button"
        
 }
-
 .form_name {
     grid-area: form_name;
 }
-
 .form_email {
     grid-area: form_email;
 }
-
 .form_message {
     grid-area: form_message;
 }
-
 .form_button {
     grid-area: form_button;
 }
-
 
 /* Flex inside message grid*/
 .form_message, .form_name, .form_email {
@@ -216,7 +206,7 @@ p {
 }
 
 footer {
-    margin-top: auto;
+    /* margin-top: auto; */
     background-color: rgb(82, 40, 102)
 }
 
