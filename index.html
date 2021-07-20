@@ -2,35 +2,37 @@
 <html>
     <head>
         <title>Portfolio Natalia Grigoryeva</title>
+        <link href="css/index.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         
-       <!-- <style>
-           body {background-color: rgb(1, 1, 31)}
-           h1 {color:mediumpurple}
-           h2 {color: wheat}
-           p {color: white}
-           ul {color: white}
-           label {color: white}
-       </style>              -->
-    
-       <link href="css/index.css" rel="stylesheet">
-
-       <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <!-- These links are downloaded from google font to get the desirable font Lato -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     </head>
 
     <div class='whole_page'>
     <body>
-            <header class='main_header'>
+        <header class='main_header'>
             <h1>LAUNCHPAD <br>  by Natalia Grigoryeva </h1>
             
             <!-- <nav> -->
                 <un  class='main_nav'>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="hobby.html">Hobby</a></li>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="hobby.html">HOBBY</a></li>
                 </un>
             <!-- </nav> -->
         </header>
 
+        <section class="second_nav">
+            <un class="second_nav_list">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#leave_message">Message me</a></li>
+            </un>
+        </section>
 
         <section class='about'>
         <h2>About</h2>
@@ -51,10 +53,9 @@
         
         <section id="experience">
         <h2>Experience</h2>
-            <ul>
-                <li>LaunchHobby application</li>
-                <li>LaunchStudy application </li>
-            </ul>
+        <p>
+                As a professional mathematician I enjoyed a career in management of investments into the real estate for more than a decade. During these years I have developed a lot of skills like leadership, time-management, team working, mentoring and more which are valuable across any project-based career. Now I am moving to a new professional adventure in IT industry. I enjoy the worldwide opportunity this industry provides and looking forward to using these to make a world a little bit better place. 
+        </p>
         </section>
 
         <section id="skills">
@@ -67,33 +68,24 @@
             <ul></ul>
         </section>
 
-        <section id="work_in_progress">
-            <h2>Work in progress</h2>
-            <figure class="col">
+        <section id="app_in_progress" class="app_in_progress">
+            <h2 class="app_header">Work in progress</h2>
+             <figure class="col" class="app_picture1">
                 <img src="img/Launch_Hobby_app.jpg" alt="Launch Hobby app" title="Launch Hobby app description" class="app_icon">
-                <figcaption>
-                    Launch Hobby application
-                </figcaption>
-    
-            </figure>
-
-            <figure class="col"> 
+             </figure>
+            <p class="app_text1">Launch Hobby application. It is created for people who are looking to find their soul in some new and engaging activity.</p>
+            <figure class="col" class="app_picture2"> 
                 <img src="img/Launch_Study_app.jpg" alt="Launch Study app" title="Launch Study app description" class="app_icon">
-                <figcaption>
-                    Launch Study application
-                </figcaption>
-    
-            </figure>
-
-            </section>
-
+             </figure>
+             <p class="app_text2">Launch Study application. It is created to help people to find the best study path to follow their career dream, still money-wise in terms of cost of study and projected job income.</p>
+        </section>
 
         <section>
         <h2>Connect</h2>
         <a href="https://github.com/NGFuture" target="_blank">GitHub </a>
         </section>
 
-        <section>
+        <section id='leave_message'>
         <h2>Leave a Message</h2>
         <form name='leave_message' class="leave_message">
             <div class="form_name">
@@ -126,7 +118,8 @@
 
         <footer></footer>
 
-        <script src="js/index.js"></script>
+        <script src="js/index_all.js"></script>
+        <script src="js/index_main.js"></script>
 
     </body>
     </div>

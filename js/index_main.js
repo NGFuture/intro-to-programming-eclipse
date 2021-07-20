@@ -1,11 +1,4 @@
-const today=new Date()
-const thisYear=today.getFullYear();
-const footer=document.querySelector('footer')
-const copyright = document.createElement("p")
-copyright.innerHTML=`<small>&copy; ${thisYear} Natalia Grigoryeva</small>`
-footer.appendChild(copyright)
-
-const skills = ["Coding JavaScript","WebDesign",'Photography', "Time management"];
+const skills = ["Coding JavaScript","WebDesign", "Data structuring",'Photography', "Time management", "Leadership", 'Teamworking'];
 
 const skillsSelection=document.getElementById('skills')
 if (skillsSelection !== null) {

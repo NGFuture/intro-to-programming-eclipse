@@ -1,9 +1,7 @@
 * {
     box-sizing: border-box;
-    /* background-color: rgb(11, 3, 46); */
-    color: wheat;
-    font-family: 'Trebuchet MS';
- 
+    color:  rgb(241, 236, 221);
+    font-family: 'Lato', sans-serif;
 }
 
 body {
@@ -18,11 +16,9 @@ html {
     font-size: 100%
 }
 
-.whole_page, .main_header, .main_nav, #work_in_progress, .form_name, .form_email, .form_message, .about figure {
+.whole_page, .main_header, .main_nav, .second_nav, .second_nav_list, .form_name, .form_email, .form_message, .about figure, .col {
     display: flex;
-
     flex-direction: column;
-
 }
 
 .whole_page {
@@ -30,29 +26,50 @@ html {
 }
 
 .main_header {
-    background-color: rgb(160, 150, 200);
+    background-color: rgb(82, 40, 102);
     padding: 0.25rem;
     align-items: center;
-    
 }
 
+/* Main header list decorations section - START*/
 .main_nav{
     list-style: none;
 }
-
 .main_nav li {
     margin-right: 10px;
 }
-
-.main_nav a:link {
-     text-decoration: none;
-    
+.main_nav a {
+     text-decoration: none;    
 }
-
 .main_nav a:hover {
     text-decoration: underline;
-  }
+}
 
+/* SECONDARY Navigation decorations section - START*/
+.second_nav_list{
+    list-style: none;
+}
+.second_nav_list li {
+    margin-right: 10px;
+}
+.second_nav_list a:link {
+     text-decoration: none;    
+}
+.second_nav_list a:hover {
+    text-decoration: underline;
+}
+.second_nav_list {
+    padding: 0.25rem;
+    align-items: center; 
+}
+.second_nav {
+    background-color: rgb(136, 211, 23)
+
+}
+.second_nav_list li a {
+    color: rgb(82, 40, 102);
+}
+/* SECONDARY Navigation decorations section - END*/
 
 h1 {
     margin: 0;
@@ -61,11 +78,10 @@ h1 {
 
 h2 {
     font-size: 1.5rem;
-
 }
 
 .photo_natalia {
-    border: 2px solid rgb(101 ,239, 52);
+    border: 4px solid rgb(136, 211, 23);
     border-radius: 50%;
     width: 200px;
     margin: auto;
@@ -74,7 +90,7 @@ h2 {
 
 section {
     padding: 1%;
-    background-color: rgb(11, 3, 46)
+    background-color: rgb(21, 14, 36)
 }
 
 p {
@@ -83,33 +99,70 @@ p {
 
 #skills ul li {
     list-style: none; /* no dots for list elements */
-    display: inline-block;
-    
+    display: inline-block;  
     writing-mode: horizontal-tb;
     border-radius: 0.25rem;
     /* opacity is 50%.  */
-  background: rgba(115,173,33, 0.5);
-  padding: 0.2rem;
-  margin: 0.5rem;
-
-  
-  box-sizing: border-box;
+  background: rgba(174, 187, 189, 0.7);
+  padding: 0.25rem;
+  margin: 0.3rem;
   width: auto;
+
 }
+
+/*correcting default list styling with start padding 40px*/
+#skills ul {
+    padding-inline-start: 0 
+}
+
 
 .app_icon  {
     border: 2px solid rgb(101 ,239, 52);
     border-radius: 10%;
-    
+    width: 120px;
+    margin: auto;
 }
 
 .app_icon:hover {
     /* Start the shake animation and make the animation last for 0.5 seconds */
     animation: shake 0.5s;
-  
     /* When the animation is finished, start again */
     animation-iteration-count: 1;
   }
+
+/*  GRID FOR Work in progress */
+.app_in_progress {
+    display: grid;   
+    grid-gap: 0px;
+    grid-template-areas: 
+        "app_header"
+        "app_picture1"
+        "app_text1"
+        "app_picture2"
+        "app_text2"      
+}
+.app_header {
+    grid-area: app_header;    
+}
+.app_picture1 {
+    grid-area: app_picture1;
+}
+.app_text1 {
+    grid-area: app_text1;
+    align-self: center
+}
+.app_picture2 {
+    grid-area: app_picture2;
+}
+.app_text2 {
+    grid-area: app_text2;
+    align-self: center
+}
+
+/* Flex inside message grid*/
+.form_message, .form_name, .form_email {
+    flex-grow: 1;
+}
 
 /*  GRID FOR MESSAGE FORM */
 .leave_message {
@@ -122,28 +175,22 @@ p {
         "form_button form_button"
        
 }
-
 .form_name {
     grid-area: form_name;
 }
-
 .form_email {
     grid-area: form_email;
 }
-
 .form_message {
     grid-area: form_message;
 }
-
 .form_button {
     grid-area: form_button;
 }
 
-
 /* Flex inside message grid*/
 .form_message, .form_name, .form_email {
     flex-grow: 1;
-
 }
 
 /* Button format*/
@@ -159,7 +206,8 @@ p {
 }
 
 footer {
-    margin-top: auto;
+    /* margin-top: auto; */
+    background-color: rgb(82, 40, 102)
 }
 
 /* Hobby page */
@@ -203,32 +251,22 @@ footer {
 }
 
 @media (min-width: 769px) {
-    .main_header, .main_nav, .about {
+    .main_header, .main_nav, .second_nav_list,.about {
         flex-direction: row;
         align-items: flex-end;
     }
     .main_header {
         justify-content: space-between;
-
-    }
-    
-
-    
-    #work_in_progress  {
-        flex-direction: row;
-        flex-wrap: wrap;
-
     }
 
-    #work_in_progress h2 {
-        flex: 1 100%;
-
+    .second_nav_list {
+        justify-content: flex-end;
     }
 
     .leave_message {
         display: grid;
         /* grid-template-columns: 1fr 1fr; */
-        grid-gap: 0px;
+        grid-gap: 10px;
         grid-template-areas: 
             "form_name form_email"
             "form_message form_message"
@@ -271,21 +309,21 @@ footer {
         place-self: center;
     }
 
-/* NOT WORKING PROPERLY - when really wide screen becoms column again. Whay 20vw not 50? or 25% not 50%*/
-    .col  {
-        margin: 5px;
-        flex: 1 25%;
-
-    }
+    /*  Media >769 px GRID FOR applications */
+    .app_in_progress {
+        display: grid;   
+        grid-gap: 20px;
+        grid-template-areas: 
+            "app_header app_header app_header"
+            "app_picture1 app_text1 app_text1"
+            "app_picture2 app_text2 app_text2"
+       
+}
 
 }
-    
 
 
-
-
-
-
+    /*  Anymation for app icons */
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
